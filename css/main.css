@@ -83,6 +83,39 @@ body {
 }
 
 
+.dark-mode .about {
+    background-image: url(../images/darc-mood-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dark-mode .quick {
+    background-image: url(../images/mood-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width:768px) {
+    .dark-mode .about {
+        background-image: url(../images/tetelon-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+@media (max-width:768px) {
+    .dark-mode .quick {
+        background-image: url(../images/telefon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
 /* styles.css yoki <style> ichida */
 body {
     background-color: white;
