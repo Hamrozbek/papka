@@ -1,12 +1,728 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Document</title>
+    <link rel="icon" href="./images/logo.svg">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <title>Product</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="containers pt-[17px]  md:pt-[23px] pb-[16px] md:pb-[29px] flex items-center justify-between">
+            <div class="flex pl-[32px] md:pl-0 gap-[16px] items-center">
+                <a href="/">
+                    <img src="./images/logo.svg" alt="logo" width="40" height="36">
+                </a>
+                <p class=" font-bold text-[30px] text-[#173A56] hover:text-[#02897A] leauding-[28px] duration-200">
+                    Product</p>
+            </div>
+            <div class="hidden md:flex gap-[24px] items-center">
+                <div class="flex gap-[30px]">
+                    <a href="#">
+                        <p
+                            class="font-medum text-[16px] leading-[28px] text-[#22343D] hover:font-semibold duration-200">
+                            Product</p>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-medum text-[16px] leading-[28px] text-[#22343D] hover:font-semibold duration-200">
+                            Customers</p>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-medum text-[16px] leading-[28px] text-[#22343D] hover:font-semibold duration-200">
+                            Pricing</p>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-medum text-[16px] leading-[28px] text-[#22343D] hover:font-semibold duration-200">
+                            Resources</p>
+                    </a>
+                </div>
+                <div class="flex gap-[24px] items-center">
+                    <button
+                        class="font-semibold text-[16px] text-[#173A56] hover:text-[#FFFFFF] pt-[10px] pb-[9px] pl-[25px] pr-[22px] border-[1px] border-[#BCD0E5] rounded-[4px] hover:bg-[#02897A] duration-300 transform active:scale-90">Sign
+                        In</button>
+                    <button
+                        class="font-semibold text-[16px] text-[#FFFFFF] hover:text-[#173A56] border border-transparent pt-[10px] pb-[9px] pl-[25px] pr-[22px] bg-[#02897A] rounded-[4px] hover:bg-[#FFFFFF] hover:border-[1px] hover:border-[#BCD0E5] duration-300 transform active:scale-90">Sign
+                        Up</button>
+                    <!-- Dark mode toggle icon button -->
+                    <button id="darkToggleBtn"
+                        class="rounded-full border border-[#02897A] p-[4px] transform active:scale-90">
+                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="16" fill="#F3F3F3" />
+                            <path
+                                d="M16 26C21.514 26 26 21.514 26 16C26 10.486 21.514 6 16 6C10.486 6 6 10.486 6 16C6 21.514 10.486 26 16 26Z"
+                                fill="#02897A" />
+                            <path d="M23 16C23 12.134 19.865 9 16 9V23C19.865 23 23 19.866 23 16Z" fill="white" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="flex gap-[8px] pr-[20px]">
+                <button class="md:hidden transform active:scale-90">
+                    <svg class="text-[#173A56]" width="28" height="31" viewBox="0 0 28 31" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 15.5H24.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M3.5 7.75H24.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M3.5 23.25H24.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    </button>
+                    <button onclick="toggleDarkMode()"
+                        class=" md:hidden rounded-full border border-[#02897A] p-[4px] transform active:scale-90">
+                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="16" fill="#F3F3F3" />
+                            <path
+                                d="M16 26C21.514 26 26 21.514 26 16C26 10.486 21.514 6 16 6C10.486 6 6 10.486 6 16C6 21.514 10.486 26 16 26Z"
+                                fill="#02897A" />
+                            <path d="M23 16C23 12.134 19.865 9 16 9V23C19.865 23 23 19.866 23 16Z" fill="white" />
+                        </svg>
+                    </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="pt-[29px] md:pt-[25px] pb-[99px] md:pb-[114px]">
+            <div class="containers md:flex items-center">
+                <img class="md:hidden flex mx-auto pt-[10px]" src="./images/header.png" alt="header img" width="338"
+                    height="310">
+                <div class="text-center md:text-start">
+                    <h2
+                        class="font-bold text-[36px] md:text-[40px] text-[#22343D] leading-[60px] w-[369px] md:w-[400px] mx-auto md:mx-0 hover:text-[#02897A] duration-200">
+                        Work at the speed of
+                        thought
+                    </h2>
+                    <p
+                        class="font-normal text-[18px] text-[#22343D] leading-[28px] pt-[18px] w-[326px]  md:w-[458px] mx-auto md:mx-0">
+                        Tools,
+                        tutorials,
+                        design and innovation experts, all in one place! The most intuitive way to imagine your next
+                        user
+                        experience.</p>
+                    <div class="flex gap-[30px] pt-[45px] items-center w-[335px] md:w-[400px] mx-auto md:mx-0">
+                        <button
+                            class="font-bold text-[16px] text-[#FFFFFF] py-[15px] px-[25px] md:px-[41px] bg-[#02897A] rounded-[4px] border border-transparent hover:bg-[#FFFFFF] hover:text-[#02897A] hover:border-[1px] hover:border-[#02897A] duration-300 transform active:scale-90">Get
+                            started</button>
+                        <a class="flex gap-[9px] font-semibold text-[16px] text-[#02897A]" href="#">
+                            <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.8516 8.53032C16.591 8.96531 16.591 10.0347 15.8516 10.4697L2.1954 18.5027C1.44543 18.9439 0.5 18.4031 0.5 17.533V1.46697C0.5 0.596876 1.44543 0.0561381 2.1954 0.497293L15.8516 8.53032Z"
+                                    fill="currentColor" />
+                            </svg>
+                            <p class="border-b-[1px] border-[#02897A]">Watch the Video</p>
+                        </a>
+                    </div>
+                </div>
+                <img class="hidden md:flex" src="./images/header.png" alt="header img" width="600" height="555">
+            </div>
+        </section>
+        <section>
+            <h2
+                class="font-bold text-[32px] text-[#22343D] text-center w-[338px] mx-auto md:w-[530px] mx-auto pb-[66px] hover:text-[#02897A] duration-200">
+                Product was Built
+                Specifically for You</h2>
+            <div class="about">
+                <div class="containers pb-[38px] md:pb-[90px]">
+                    <div class="md:flex justify-between">
+                        <div class="w-[240px] mx-auto md:mx-0 text-center md:text-start">
+                            <img class="w-[51px] h-[50px] mx-auto md:mx-0" src="./images/tests-icon.svg" alt="icon"
+                                width="51" height="50">
+                            <h3 class="font-semibold text-[22px] pt-[30px] text-[#22343D]">First click tests</h3>
+                            <p class="font-normal text-[16px] text-[#22343D] pt-[13px] pb-[26px]">While most people
+                                enjoy
+                                casino
+                                gambling,</p>
+                        </div>
+                        <div class="w-[240px] mx-auto md:mx-0 text-center md:text-start">
+                            <img class="w-[51] h-[50] mx-auto md:mx-0" src="./images/design.svg" alt="icon" width="51"
+                                height="50">
+                            <h3 class="font-semibold text-[22px] pt-[30px] text-[#22343D]">Design surveys</h3>
+                            <p class="font-normal text-[16px] text-[#22343D] pt-[13px] pb-[26px]">Sports betting,
+                                lottery
+                                and
+                                bingo playing for the fun</p>
+                        </div>
+                        <div class="w-[240px] mx-auto md:mx-0 text-center md:text-start">
+                            <img class="w-[51] h-[50] mx-auto md:mx-0" src="./images/prefensi.svg" alt="icon" width="51"
+                                height="50">
+                            <h3 class="font-semibold text-[22px] pt-[30px] text-[#22343D]">Preference tests</h3>
+                            <p class="font-normal text-[16px] text-[#22343D] pt-[13px] pb-[26px]">The Myspace page
+                                defines
+                                the
+                                individual.</p>
+                        </div>
+                        <div class="w-[240px] mx-auto md:mx-0 text-center md:text-start">
+                            <img class="w-[51] h-[50] mx-auto md:mx-0" src="./images/five.svg" alt="icon" width="51"
+                                height="50">
+                            <h3 class="font-semibold text-[22px] pt-[30px] text-[#22343D]">Five second tests</h3>
+                            <p class="font-normal text-[16px] text-[#22343D] pt-[13px] pb-[26px]">Personal choices and
+                                the
+                                overall personality of the person. </p>
+                        </div>
+                    </div>
+                    <div class=" w-[175px] mx-auto pt-[34px]">
+                        <button
+                            class="font-bold text-[16px] text-[#FFFFFF] py-[15px] px-[32px] bg-[#02897A]  rounded-[4px] border border-transparent hover:bg-[#FFFFFF] hover:text-[#02897A] hover:border-[1px] hover:border-[#02897A] duration-300 transform active:scale-90">SIGN
+                            UP NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-[100px] md:py-[150px]">
+            <div class="containers md:flex justify-between">
+                <img class="md:hidden w-[349px] h-[306px] mx-auto pb-[50px]" src="./images/manage.png" alt="amico img"
+                    width="349" height="306">
+                <div class="w-[334px] md:w-[486px] mx-auto md:mx-0">
+                    <p class="font-semibold text-[16px] text-[#22343D]">Effortless Validation for</p>
+                    <h2 class="font-bold text-[32px] text-[#22343D] pt-[8px] hover:text-[#02897A] duration-200">
+                        Management</h2>
+                    <h3 class="font-semibold text-[16px] text-[#22343D] pt-[16px] md:pt-[131px]">Accessory makers</h3>
+                    <p class="font-normal text-[16px] text-[#22343D] pt-[12px]">While most people enjoy casino gambling,
+                        sports betting, lottery and bingo playing for the fun</p>
+                    <h3 class="font-semibold text-[16px] text-[#22343D] pt-[25px]">Alterationists</h3>
+                    <p class="font-normal text-[16px] text-[#22343D] pt-[12px]">If you are looking for a new way to
+                        promote
+                        your business that won’t cost you more money, </p>
+                </div>
+                <img class="hidden md:flex" src="./images/manage.png" alt="amico img" width="539" height="473">
+            </div>
+        </section>
+        <section class="pb-[100px] md:pb-[150px]">
+            <div class="containers md:flex justify-between">
+                <img class="md:w-[543px] md:h-[500px] w-[350px] h-[319px] md:mx-0 mx-auto" src="./images/amico.png"
+                    alt="amico" width="543" height="500">
+                <div class="w-[334px] md:w-[486px] mx-auto md:mx-0 pt-[50px] md:pt-0">
+                    <div>
+                        <p class="font-semibold text-[16px] text-[#22343D]">Easier decision making for</p>
+                        <h2 class="font-bold text-[32px] text-[#22343D] pt-[8px] hover:text-[#02897A] duration-200">
+                            Customer Support</h2>
+                        <p class="font-normal text-[16px] text-[#22343D] pt-[23px]">The Myspace page defines the
+                            individual,
+                            his or her characteristics, traits, personal choices and
+                            the overall personality of the person. </p>
+                    </div>
+                    <div>
+                        <div class="flex gap-[30px] items-center pt-[30px]">
+                            <img src="./images/never.svg" alt="never" width="35" height="35">
+                            <p class="font-normal text-[16px] text-[#22343D]">Never worry about overpaying for your
+                                energy
+                                again. </p>
+                        </div>
+                        <div class="flex gap-[30px] items-center pt-[30px]">
+                            <img src="./images/we-well.svg" alt="never" width="35" height="35">
+                            <p class="font-normal text-[16px] text-[#22343D]">Never worry about overpaying for your
+                                energy
+                                again. </p>
+                        </div>
+                        <div class="flex gap-[30px] items-center pt-[30px]">
+                            <img src="./images/we-truck.svg" alt="never" width="35" height="35">
+                            <p class="font-normal text-[16px] text-[#22343D]">Never worry about overpaying for your
+                                energy
+                                again. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="containers md:flex justify-between pb-[150px]">
+                <img class="md:hidden w-[350px] h-[291px] mx-auto pb-[50px]" src="./images/colabrit.png" alt="colabrit"
+                    width="350" height="291">
+                <div class="md:w-[486px] w-[350px] mx-auto md:mx-0">
+                    <p class="font-semibold text-[16px] text-[#22343D]">Optimisation for</p>
+                    <h2 class="font-bold text-[32px] text-[#22343D] pt-[8px] hover:text-[#02897A] duration-200">
+                        Collaborative</h2>
+                    <p class="font-normal text-[16px] text-[#22343D] leauding-[26px] pt-[23px]">Few would argue that,
+                        despite the advancements of feminism over the past three decades, women still face a double
+                        standard
+                        when it comes to their behavior. </p>
+                    <h3 class="font-semibold text-[16px] leuding-[26px] text-[#22343D] pt-[30px]">Accessory makers</h3>
+                    <p class="font-normal text-[16px] text-[#22343D] leauding-[26px] pt-[12px]">While most people enjoy
+                        casino gambling, sports betting, lottery and bingo playing for the fun</p>
+                    <h3 class="font-semibold text-[16px] leuding-[26px] text-[#22343D] pt-[25px]">Alterationists</h3>
+                    <p class="font-normal text-[16px] text-[#22343D] leauding-[26px] pt-[12px]">If you are looking for a
+                        new
+                        way to promote your business that won’t cost you more money, </p>
+                </div>
+                <img class="hidden md:flex" src="./images/colabrit.png" alt="colabrit" width="541" height="451">
+            </div>
+        </section>
+        <section class="quick md:pb-[150px]">
+            <div class="containers md:pt-[53px] pt-[73px]">
+                <h2 class="font-bold text-[32px] text-[#22343D] text-center hover:text-[#02897A] duration-200">Quick &
+                    Easy Process</h2>
+                <p class="w-[338px] md:w-[542px] font-medium text-[16px] text-[#22343D] pt-[16px] mx-auto text-center">
+                    Do you require
+                    some help for your project: Conception workshop, prototyping, marketing strategy, landing page,
+                    Ux/UI?
+                </p>
+                <div class="md:flex justify-between md:pl-[94px] md:pr-[50px] pt-[32px]">
+                    <div>
+                        <div
+                            class="flex items-center gap-[14px] pt-[32px] md:gap-[16px] md:pt-0 md:w-[400px] w-[333px] mx-auto">
+                            <img class="w-[89px] h-[89px] md:w-[98px] md:h-[98px]" src="./images/quqli1.svg"
+                                alt="quqli img" width="98" height="98">
+                            <p
+                                class="quic-p font-medium text-[16px] text-[#2F281E] pt-[15px] pb-[15px] pl-[25px] pr-[25px] border-[1px] border-[#173A561A] rounded-[27px] bg-[#FFFFFF]">
+                                I can take care of your pitch</p>
+                        </div>
+                        <div class="flex items-center gap-[16px] md:pt-[24px] pt-[32px] md:w-[400px] w-[333px] mx-auto">
+                            <p
+                                class="quic-p font-medium text-[16px] text-[#2F281E] pt-[15px] pb-[15px] pl-[25px] pr-[25px] border-[1px] border-[#173A561A] rounded-[27px] bg-[#FFFFFF]">
+                                I can design you website</p>
+                            <img class="w-[89px] h-[89px] md:w-[98px] md:h-[98px]" src="./images/quiqli3.svg"
+                                alt="quqli img" width="98" height="98">
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="md:hidden flex items-center gap-[16px] md:pt-[24px] pt-[32px] w-[333px] mx-auto">
+                            <img class="w-[89px] h-[89px]" src="./images/quiqli4.svg" alt="quqli img" width="98"
+                                height="98">
+                            <p
+                                class="quic-p font-medium text-[16px] text-[#2F281E] pt-[15px] pb-[15px] pl-[25px] pr-[25px] border-[1px] border-[#173A561A] rounded-[27px] bg-[#FFFFFF]">
+                                I can help marketing strategy</p>
+                        </div>
+                        <div class="flex items-center gap-[16px] pt-[32px] md:pt-0 md:w-[400px] w-[333px] mx-auto">
+                            <p
+                                class="quic-p font-medium text-[16px] text-[#2F281E] pt-[15px] pb-[15px] pl-[25px] pr-[25px] border-[1px] border-[#173A561A] rounded-[27px] bg-[#FFFFFF]">
+                                I can prototype your app</p>
+                            <img class="w-[89px] h-[89px] md:w-[98px] md:h-[98px]" src="./images/quiqli2.svg"
+                                alt="quqli img" width="98" height="98">
+                        </div>
+                        <div class="hidden md:flex flex items-center gap-[16px] md:pt-[24px] pt-[32px]">
+                            <img src="./images/quiqli4.svg" alt="quqli img" width="98" height="98">
+                            <p
+                                class="quic-p font-medium text-[16px] text-[#2F281E] pt-[15px] pb-[15px] pl-[25px] pr-[25px] border-[1px] border-[#173A561A] rounded-[27px] bg-[#FFFFFF]">
+                                I can help marketing strategy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[220px] mx-auto pt-[63px]">
+                    <button
+                        class="font-bold text-[16px] text-[#FFFFFF] py-[15px] px-[30px] bg-[#02897A] rounded-[4px] hover:text-[#02897A] hover:bg-[#FFFFFF] border border-trancparent hover:border-[1px] hover:border-[#02897A] duration-300 transform active:scale-90">Contact
+                        our expert
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="pt-[100px] md:pt-[150px]">
+            <div class="containers mb-[61px] md:pb-[229px]">
+                <h2
+                    class="font-bold text-[34px] text-[#22343D] hover:text-[#02897A] duration-200 text-center md:text-start">
+                    Contents Strategies
+                </h2>
+                <p
+                    class="font-medium text-[16px] text-[#22343D] leauding-[26px] pt-[8px] w-[349px] md:w-[693px] mx-auto md:mx-0">
+                    We focus on ergonomics and
+                    meeting you
+                    where you work. It's only a keystroke away. </p>
+                <div class="md:flex justify-between">
+                    <div
+                        class="darc-mod w-[344px] mx-auto md:mx-0 border-[1px] boreder-[#DEDEDE] mt-[33px] rounded-[6px]">
+                        <img src="./images/contents1.png" alt="content" width="348" height="185">
+                        <p class="darc-p font-normal text-[16px] text-[#22343D] leauding-[26px] pt-[24px] md:pl-[24px]">
+                            By
+                            <span class="darc-p font-bold text-[16px] text-[#22343D] leauding-[28px]">Wahid Ari</span> |
+                            03
+                            March
+                            2019
+                        </p>
+                        <h3
+                            class="darc-p font-bold text-[24px] leauding-[40px] text-[#22343D] pt-[12px] md:pl-[24px] pb-[39px] hover:text-[#02897A] duration-200">
+                            Increasing Prosperity With Positive Thinking</h3>
+                    </div>
+                    <div
+                        class="darc-mod w-[344px] mx-auto md:mx-0 border-[1px] boreder-[#DEDEDE] mt-[33px] rounded-[6px]">
+                        <img src="./images/contents2.png" alt="content" width="348" height="185">
+                        <p class="darc-p font-normal text-[16px] text-[#22343D] leauding-[26px] pt-[24px] md:pl-[24px]">
+                            By
+                            <span class="darc-p font-bold text-[16px] text-[#22343D] leauding-[28px]">Wahid Ari</span> |
+                            03
+                            March
+                            2019
+                        </p>
+                        <h3
+                            class="darc-p font-bold text-[24px] leauding-[40px] text-[#02897A] pt-[12px]  md:pl-[24px] pb-[39px] hover:text-[#22343D] duration-200">
+                            Motivation Is The First Step To Success</h3>
+                    </div>
+                    <div
+                        class="darc-mod w-[344px] mx-auto md:mx-0 border-[1px] boreder-[#DEDEDE] mt-[33px] rounded-[6px]">
+                        <img src="./images/contents3.png" alt="content" width="348" height="185">
+                        <p class="darc-p font-normal text-[16px] text-[#22343D] leauding-[26px] pt-[24px] md:pl-[24px]">
+                            By
+                            <span class="darc-p font-bold text-[16px] text-[#22343D] leauding-[28px]">Wahid Ari</span> |
+                            03
+                            March
+                            2019
+                        </p>
+                        <h3
+                            class="darc-p font-bold text-[24px] leauding-[40px] text-[#22343D] pt-[12px] md:pl-[24px] pb-[39px] hover:text-[#02897A] duration-200">
+                            Success Steps For Your Personal Or Business</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pb-[100px] md:pb-[150px]">
+            <div class="containers">
+                <h2 class="font-bold text-[34px] text-[#22343D] text-center hover:text-[#02897A] duration-200">Price
+                    Table</h2>
+                <p class="font-medium text-[16px] text-[#22343D] pt-[8px] text-center pb-[50px]">We offer competitive
+                    price
+                </p>
+                <div class="md:flex justify-between">
+                    <div class="shadow shadow-p w-[322px] text-center rounded-[8px] mx-auto md:mx-0 mb-[32px] md:pb-0">
+                        <h3 class="darc-p font-bold text-[24px] text-[#22343D] pt-[24px]">Free</h3>
+                        <p class="darc-p font-normal text-[16px] text-[#22343D] leauding-[40px] pt-[8px]">Brief price
+                            description
+                        </p>
+                        <div class="flex gap-[8px] w-[154px] mx-auto pt-[16px] items-center">
+                            <span class="darc-span font-bold text-[76px] text-[#02897A]">0</span>
+                            <div class="text-start">
+                                <p class="darc-span font-bold text-[24px] text-[#02897A] leauding-[30px]">$</p>
+                                <p class="darc-p font-normal text-[16px] leauding-[19px] text-[#AFAFAF]">Per / month</p>
+                            </div>
+                        </div>
+                        <p class="darc-p font-medium text-[16px] text-[#22343D] pt-[16px]">Only 2 Operators</p>
+                        <p class="darc-p font-medium text-[16px] text-[#22343D] pt-[16px]">Notifications</p>
+                        <p class="darc-p font-medium text-[16px] text-[#22343D] pt-[16px]">Landing Pages</p>
+                        <button
+                            class="button-pp font-semibold text-[18px] text-[#FFFFFF] bg-[#02897A] rounded-[4px] py-[11px] px-[19px] mt-[38px] mb-[32px] hover:text-[#02897A] hover:bg-[#FFFFFF] border border-trancparent hover:border-[1px] hover:border-[#02897A] duration-300 transform active:scale-90">Order
+                            Now</button>
+                    </div>
+                    <div
+                        class="shadow w-[322px] text-center rounded-[8px] bg-[#02897A] mx-auto md:mx-0 mb-[32px] md:pb-0">
+                        <h3 class="font-bold text-[24px] text-[#FFFFFF] pt-[24px]">Standard</h3>
+                        <p class="font-normal text-[16px] text-[#FFFFFF] leauding-[40px] pt-[8px]">Brief price
+                            description
+                        </p>
+                        <div class="flex gap-[8px] w-[154px] mx-auto pt-[16px] items-center">
+                            <span class="font-bold text-[76px] text-[#FFFFFF]">5</span>
+                            <div class="text-start">
+                                <p class="font-bold text-[24px] text-[#FFFFFF] leauding-[30px]">$</p>
+                                <p class="font-normal text-[16px] leauding-[19px] text-[#FFFFFF]">Per / month</p>
+                            </div>
+                        </div>
+                        <p class="font-medium text-[16px] text-[#FFFFFF] pt-[16px]">5+ Operators</p>
+                        <p class="font-medium text-[16px] text-[#FFFFFF] pt-[16px]">Notifications</p>
+                        <p class="font-medium text-[16px] text-[#FFFFFF] pt-[16px]">Landing Pages</p>
+                        <button
+                            class="button-t font-semibold text-[18px] text-[#02897A] bg-[#FFFFFF] rounded-[4px] py-[11px] px-[19px] mt-[38px] mb-[32px] hover:text-[#FFFFFF] hover:bg-[#02897A] border border-trancparent hover:border-[1px] hover:border-[#FFFFFF] duration-300 transform active:scale-90">Order
+                            Now</button>
+                    </div>
+                    <div class="shadow shadow-p w-[322px] text-center rounded-[8px] mx-auto md:mx-0 mb-[32px] md:pb-0">
+                        <h3 class="darc-p font-bold text-[24px] text-[#22343D] pt-[24px]">Premium</h3>
+                        <p class="darc-p font-normal text-[16px] text-[#22343D] leauding-[40px] pt-[8px]">Brief price
+                            description
+                        </p>
+                        <div class="flex gap-[8px] w-[183px] mx-auto pt-[16px] items-center">
+                            <span class="darc-span font-bold text-[76px] text-[#02897A]">10</span>
+                            <div class="text-start">
+                                <p class="darc-span font-bold text-[24px] text-[#02897A] leauding-[30px]">$</p>
+                                <p class="darc-p font-normal text-[16px] leauding-[19px] text-[#AFAFAF]">Per / month</p>
+                            </div>
+                        </div>
+                        <p class="darc-p font-medium text-[16px] text-[#22343D] pt-[16px]">10+ Operators</p>
+                        <p class="darc-p font-medium text-[16px] text-[#22343D] pt-[16px]">Notifications</p>
+                        <p class="darc-p font-medium text-[16px] text-[#22343D] pt-[16px]">Landing Pages</p>
+                        <button
+                            class="button-pp font-semibold text-[18px] text-[#FFFFFF] bg-[#02897A] rounded-[4px] py-[11px] px-[19px] mt-[38px] mb-[32px] hover:text-[#02897A] hover:bg-[#FFFFFF] border border-trancparent hover:border-[1px] hover:border-[#02897A] duration-300 transform active:scale-90">Order
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="containers pb-[100px] md:pb-[150px]">
+                <div class="text-center">
+                    <h2 class="font-bold text-[34px] text-[#22343D] leauding-[57px] hover:text-[#02897A] duration-200">
+                        What Clients Say</h2>
+                    <p
+                        class="w-[323px] md:w-[537px] mx-auto font-medium text-[16px] text-[#22343D] pt-[8px] leauding-[28px]">
+                        Problems
+                        trying to resolve the conflict between the two major realms of Classical physics: Newtonian
+                        mechanics </p>
+                </div>
+                <div class="md:pt-[50px] md:flex justify-between">
+                    <div
+                        class="div-bg w-[327px] mt-[32px] md:mt-0 border-[1px] border-[#00000040] rounded-[5px] mx-auto md:mx-0">
+                        <svg class="text-[#F3CD03] w-[106px] mt-[28px] ml-[28px]" width="107" height="19"
+                            viewBox="0 0 107 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.2961 6.58663C18.2384 6.41682 18.1323 6.26761 17.9908 6.15742C17.8493 6.04723 17.6787 5.98089 17.4999 5.96658L12.2708 5.55107L10.008 0.542056C9.9359 0.380725 9.81869 0.243699 9.67047 0.147514C9.52225 0.0513295 9.34936 9.71158e-05 9.17266 1.37932e-07C8.99597 -9.684e-05 8.82302 0.0509458 8.6747 0.146968C8.52637 0.24299 8.40901 0.379887 8.33677 0.541138L6.07395 5.55107L0.844797 5.96658C0.669105 5.9805 0.501144 6.04474 0.361006 6.15161C0.220868 6.25849 0.114488 6.40348 0.0545932 6.56923C-0.00530196 6.73498 -0.0161763 6.91448 0.0232713 7.08625C0.062719 7.25802 0.150818 7.41479 0.277029 7.5378L4.14134 11.3049L2.77466 17.2229C2.73316 17.402 2.74646 17.5895 2.81283 17.761C2.8792 17.9324 2.99559 18.08 3.14687 18.1845C3.29816 18.2891 3.47737 18.3457 3.66124 18.3471C3.84511 18.3485 4.02516 18.2946 4.17803 18.1924L9.17237 14.8628L14.1667 18.1924C14.3229 18.2961 14.5072 18.3495 14.6947 18.3454C14.8822 18.3413 15.0639 18.2799 15.2155 18.1694C15.367 18.0589 15.4811 17.9047 15.5423 17.7274C15.6036 17.5502 15.6091 17.3584 15.5581 17.1779L13.8805 11.3076L18.0411 7.56348C18.3135 7.31766 18.4135 6.93426 18.2961 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M40.3103 6.58663C40.2526 6.41682 40.1465 6.26761 40.005 6.15742C39.8635 6.04723 39.6929 5.98089 39.5141 5.96658L34.2849 5.55107L32.0221 0.542056C31.9501 0.380725 31.8328 0.243699 31.6846 0.147514C31.5364 0.0513295 31.3635 9.71158e-05 31.1868 1.37932e-07C31.0101 -9.684e-05 30.8372 0.0509458 30.6889 0.146968C30.5405 0.24299 30.4232 0.379887 30.3509 0.541138L28.0881 5.55107L22.859 5.96658C22.6833 5.9805 22.5153 6.04474 22.3752 6.15161C22.235 6.25849 22.1286 6.40348 22.0688 6.56923C22.0089 6.73498 21.998 6.91448 22.0374 7.08625C22.0769 7.25802 22.165 7.41479 22.2912 7.5378L26.1555 11.3049L24.7888 17.2229C24.7473 17.402 24.7606 17.5895 24.827 17.761C24.8934 17.9324 25.0097 18.08 25.161 18.1845C25.3123 18.2891 25.4915 18.3457 25.6754 18.3471C25.8593 18.3485 26.0393 18.2946 26.1922 18.1924L31.1865 14.8628L36.1809 18.1924C36.3371 18.2961 36.5214 18.3495 36.7089 18.3454C36.8963 18.3413 37.0781 18.2799 37.2296 18.1694C37.3812 18.0589 37.4952 17.9047 37.5565 17.7274C37.6178 17.5502 37.6233 17.3584 37.5723 17.1779L35.8947 11.3076L40.0553 7.56348C40.3277 7.31766 40.4277 6.93426 40.3103 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M62.321 6.58663C62.2633 6.41682 62.1572 6.26761 62.0157 6.15742C61.8743 6.04723 61.7036 5.98089 61.5248 5.96658L56.2957 5.55107L54.0329 0.542056C53.9608 0.380725 53.8436 0.243699 53.6954 0.147514C53.5471 0.0513295 53.3743 9.71158e-05 53.1976 1.37932e-07C53.0209 -9.684e-05 52.8479 0.0509458 52.6996 0.146968C52.5513 0.24299 52.4339 0.379887 52.3617 0.541138L50.0989 5.55107L44.8697 5.96658C44.694 5.9805 44.526 6.04474 44.3859 6.15161C44.2458 6.25849 44.1394 6.40348 44.0795 6.56923C44.0196 6.73498 44.0087 6.91448 44.0482 7.08625C44.0876 7.25802 44.1757 7.41479 44.3019 7.5378L48.1662 11.3049L46.7996 17.2229C46.7581 17.402 46.7714 17.5895 46.8377 17.761C46.9041 17.9324 47.0205 18.08 47.1718 18.1845C47.3231 18.2891 47.5023 18.3457 47.6861 18.3471C47.87 18.3485 48.0501 18.2946 48.2029 18.1924L53.1973 14.8628L58.1916 18.1924C58.3478 18.2961 58.5321 18.3495 58.7196 18.3454C58.9071 18.3413 59.0888 18.2799 59.2404 18.1694C59.3919 18.0589 59.506 17.9047 59.5672 17.7274C59.6285 17.5502 59.634 17.3584 59.5831 17.1779L57.9054 11.3076L62.066 7.56348C62.3384 7.31766 62.4384 6.93426 62.321 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M84.3371 6.58663C84.2795 6.41682 84.1733 6.26761 84.0319 6.15742C83.8904 6.04723 83.7197 5.98089 83.541 5.96658L78.3118 5.55107L76.049 0.542056C75.9769 0.380725 75.8597 0.243699 75.7115 0.147514C75.5633 0.0513295 75.3904 9.71158e-05 75.2137 1.37932e-07C75.037 -9.684e-05 74.864 0.0509458 74.7157 0.146968C74.5674 0.24299 74.45 0.379887 74.3778 0.541138L72.115 5.55107L66.8858 5.96658C66.7101 5.9805 66.5422 6.04474 66.402 6.15161C66.2619 6.25849 66.1555 6.40348 66.0956 6.56923C66.0357 6.73498 66.0248 6.91448 66.0643 7.08625C66.1037 7.25802 66.1918 7.41479 66.318 7.5378L70.1824 11.3049L68.8157 17.2229C68.7742 17.402 68.7875 17.5895 68.8538 17.761C68.9202 17.9324 69.0366 18.08 69.1879 18.1845C69.3392 18.2891 69.5184 18.3457 69.7023 18.3471C69.8861 18.3485 70.0662 18.2946 70.219 18.1924L75.2134 14.8628L80.2077 18.1924C80.364 18.2961 80.5482 18.3495 80.7357 18.3454C80.9232 18.3413 81.1049 18.2799 81.2565 18.1694C81.408 18.0589 81.5221 17.9047 81.5834 17.7274C81.6446 17.5502 81.6501 17.3584 81.5992 17.1779L79.9215 11.3076L84.0821 7.56348C84.3545 7.31766 84.4545 6.93426 84.3371 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M92.1977 11.3049L90.831 17.2229C90.7887 17.4021 90.8014 17.5899 90.8674 17.7618C90.9335 17.9336 91.0499 18.0816 91.2013 18.1863C91.3528 18.291 91.5323 18.3476 91.7164 18.3487C91.9006 18.3498 92.0808 18.2953 92.2334 18.1924L97.2278 14.8629L102.222 18.1924C102.378 18.2962 102.563 18.3496 102.75 18.3454C102.938 18.3413 103.119 18.2799 103.271 18.1694C103.422 18.0589 103.536 17.9047 103.598 17.7274C103.659 17.5502 103.665 17.3584 103.614 17.178L101.936 11.3077L106.097 7.56351C106.23 7.44353 106.325 7.28712 106.37 7.11362C106.416 6.94012 106.409 6.75715 106.351 6.58734C106.294 6.41752 106.188 6.26831 106.046 6.15815C105.905 6.04799 105.734 5.98172 105.555 5.96752L100.326 5.5511L98.0634 0.542085C97.9912 0.380794 97.8739 0.243833 97.7257 0.147729C97.5774 0.0516259 97.4045 0.000488281 97.2278 0.000488281C97.0511 0.000488281 96.8782 0.0516259 96.7299 0.147729C96.5816 0.243833 96.4643 0.380794 96.3922 0.542085L94.1294 5.5511L88.9002 5.96661C88.7245 5.98053 88.5566 6.04477 88.4164 6.15164C88.2763 6.25852 88.1699 6.40351 88.11 6.56926C88.0501 6.73501 88.0392 6.91451 88.0787 7.08628C88.1181 7.25805 88.2062 7.41482 88.3324 7.53783L92.1977 11.3049ZM94.8145 7.33696C94.9783 7.32406 95.1355 7.26735 95.2698 7.17278C95.404 7.07821 95.5104 6.94927 95.5777 6.79946L97.2278 3.14795L98.8779 6.79946C98.9452 6.94927 99.0515 7.07821 99.1858 7.17278C99.3201 7.26735 99.4773 7.32406 99.641 7.33696L103.284 7.62588L100.284 10.3262C100.024 10.561 99.9199 10.9224 100.015 11.26L101.165 15.282L97.7378 12.9972C97.5874 12.8963 97.4103 12.8423 97.2292 12.8423C97.048 12.8423 96.871 12.8963 96.7206 12.9972L93.1397 15.3848L94.1028 11.215C94.1381 11.0617 94.1333 10.9018 94.089 10.7508C94.0447 10.5998 93.9622 10.4627 93.8496 10.3528L91.0631 7.63597L94.8145 7.33696Z"
+                                fill="currentColor" />
+                        </svg>
+                        <p
+                            class="pp font-normal text-[16px] text-[#737373] leauding-[28px] w-[275px] mt-[16px] ml-[26px]">
+                            Product helps you see how many more days you need to work to reach your financial goal.</p>
+                        <div class="flex gap-[14px] mt-[16px] ml-[26px] mb-[23px] items-center">
+                            <img src="./images/wohid-ari.svg" alt="wohid-ari" width="50" height="50">
+                            <div>
+                                <strong class="font-semibold text-[16px] text-[#02897A] leauding-[24px]">Wahid
+                                    Ari</strong>
+                                <p class="pp font-medium text-[14px] text-[#252B42] leauding-[24px]">Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="div-bg w-[327px] mt-[32px] md:mt-0 border-[1px] border-[#00000040] rounded-[5px] mx-auto md:mx-0">
+                        <svg class="text-[#F3CD03] w-[106px] mt-[28px] ml-[28px]" width="107" height="19"
+                            viewBox="0 0 107 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.2961 6.58663C18.2384 6.41682 18.1323 6.26761 17.9908 6.15742C17.8493 6.04723 17.6787 5.98089 17.4999 5.96658L12.2708 5.55107L10.008 0.542056C9.9359 0.380725 9.81869 0.243699 9.67047 0.147514C9.52225 0.0513295 9.34936 9.71158e-05 9.17266 1.37932e-07C8.99597 -9.684e-05 8.82302 0.0509458 8.6747 0.146968C8.52637 0.24299 8.40901 0.379887 8.33677 0.541138L6.07395 5.55107L0.844797 5.96658C0.669105 5.9805 0.501144 6.04474 0.361006 6.15161C0.220868 6.25849 0.114488 6.40348 0.0545932 6.56923C-0.00530196 6.73498 -0.0161763 6.91448 0.0232713 7.08625C0.062719 7.25802 0.150818 7.41479 0.277029 7.5378L4.14134 11.3049L2.77466 17.2229C2.73316 17.402 2.74646 17.5895 2.81283 17.761C2.8792 17.9324 2.99559 18.08 3.14687 18.1845C3.29816 18.2891 3.47737 18.3457 3.66124 18.3471C3.84511 18.3485 4.02516 18.2946 4.17803 18.1924L9.17237 14.8628L14.1667 18.1924C14.3229 18.2961 14.5072 18.3495 14.6947 18.3454C14.8822 18.3413 15.0639 18.2799 15.2155 18.1694C15.367 18.0589 15.4811 17.9047 15.5423 17.7274C15.6036 17.5502 15.6091 17.3584 15.5581 17.1779L13.8805 11.3076L18.0411 7.56348C18.3135 7.31766 18.4135 6.93426 18.2961 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M40.3103 6.58663C40.2526 6.41682 40.1465 6.26761 40.005 6.15742C39.8635 6.04723 39.6929 5.98089 39.5141 5.96658L34.2849 5.55107L32.0221 0.542056C31.9501 0.380725 31.8328 0.243699 31.6846 0.147514C31.5364 0.0513295 31.3635 9.71158e-05 31.1868 1.37932e-07C31.0101 -9.684e-05 30.8372 0.0509458 30.6889 0.146968C30.5405 0.24299 30.4232 0.379887 30.3509 0.541138L28.0881 5.55107L22.859 5.96658C22.6833 5.9805 22.5153 6.04474 22.3752 6.15161C22.235 6.25849 22.1286 6.40348 22.0688 6.56923C22.0089 6.73498 21.998 6.91448 22.0374 7.08625C22.0769 7.25802 22.165 7.41479 22.2912 7.5378L26.1555 11.3049L24.7888 17.2229C24.7473 17.402 24.7606 17.5895 24.827 17.761C24.8934 17.9324 25.0097 18.08 25.161 18.1845C25.3123 18.2891 25.4915 18.3457 25.6754 18.3471C25.8593 18.3485 26.0393 18.2946 26.1922 18.1924L31.1865 14.8628L36.1809 18.1924C36.3371 18.2961 36.5214 18.3495 36.7089 18.3454C36.8963 18.3413 37.0781 18.2799 37.2296 18.1694C37.3812 18.0589 37.4952 17.9047 37.5565 17.7274C37.6178 17.5502 37.6233 17.3584 37.5723 17.1779L35.8947 11.3076L40.0553 7.56348C40.3277 7.31766 40.4277 6.93426 40.3103 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M62.321 6.58663C62.2633 6.41682 62.1572 6.26761 62.0157 6.15742C61.8743 6.04723 61.7036 5.98089 61.5248 5.96658L56.2957 5.55107L54.0329 0.542056C53.9608 0.380725 53.8436 0.243699 53.6954 0.147514C53.5471 0.0513295 53.3743 9.71158e-05 53.1976 1.37932e-07C53.0209 -9.684e-05 52.8479 0.0509458 52.6996 0.146968C52.5513 0.24299 52.4339 0.379887 52.3617 0.541138L50.0989 5.55107L44.8697 5.96658C44.694 5.9805 44.526 6.04474 44.3859 6.15161C44.2458 6.25849 44.1394 6.40348 44.0795 6.56923C44.0196 6.73498 44.0087 6.91448 44.0482 7.08625C44.0876 7.25802 44.1757 7.41479 44.3019 7.5378L48.1662 11.3049L46.7996 17.2229C46.7581 17.402 46.7714 17.5895 46.8377 17.761C46.9041 17.9324 47.0205 18.08 47.1718 18.1845C47.3231 18.2891 47.5023 18.3457 47.6861 18.3471C47.87 18.3485 48.0501 18.2946 48.2029 18.1924L53.1973 14.8628L58.1916 18.1924C58.3478 18.2961 58.5321 18.3495 58.7196 18.3454C58.9071 18.3413 59.0888 18.2799 59.2404 18.1694C59.3919 18.0589 59.506 17.9047 59.5672 17.7274C59.6285 17.5502 59.634 17.3584 59.5831 17.1779L57.9054 11.3076L62.066 7.56348C62.3384 7.31766 62.4384 6.93426 62.321 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M84.3371 6.58663C84.2795 6.41682 84.1733 6.26761 84.0319 6.15742C83.8904 6.04723 83.7197 5.98089 83.541 5.96658L78.3118 5.55107L76.049 0.542056C75.9769 0.380725 75.8597 0.243699 75.7115 0.147514C75.5633 0.0513295 75.3904 9.71158e-05 75.2137 1.37932e-07C75.037 -9.684e-05 74.864 0.0509458 74.7157 0.146968C74.5674 0.24299 74.45 0.379887 74.3778 0.541138L72.115 5.55107L66.8858 5.96658C66.7101 5.9805 66.5422 6.04474 66.402 6.15161C66.2619 6.25849 66.1555 6.40348 66.0956 6.56923C66.0357 6.73498 66.0248 6.91448 66.0643 7.08625C66.1037 7.25802 66.1918 7.41479 66.318 7.5378L70.1824 11.3049L68.8157 17.2229C68.7742 17.402 68.7875 17.5895 68.8538 17.761C68.9202 17.9324 69.0366 18.08 69.1879 18.1845C69.3392 18.2891 69.5184 18.3457 69.7023 18.3471C69.8861 18.3485 70.0662 18.2946 70.219 18.1924L75.2134 14.8628L80.2077 18.1924C80.364 18.2961 80.5482 18.3495 80.7357 18.3454C80.9232 18.3413 81.1049 18.2799 81.2565 18.1694C81.408 18.0589 81.5221 17.9047 81.5834 17.7274C81.6446 17.5502 81.6501 17.3584 81.5992 17.1779L79.9215 11.3076L84.0821 7.56348C84.3545 7.31766 84.4545 6.93426 84.3371 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M92.1977 11.3049L90.831 17.2229C90.7887 17.4021 90.8014 17.5899 90.8674 17.7618C90.9335 17.9336 91.0499 18.0816 91.2013 18.1863C91.3528 18.291 91.5323 18.3476 91.7164 18.3487C91.9006 18.3498 92.0808 18.2953 92.2334 18.1924L97.2278 14.8629L102.222 18.1924C102.378 18.2962 102.563 18.3496 102.75 18.3454C102.938 18.3413 103.119 18.2799 103.271 18.1694C103.422 18.0589 103.536 17.9047 103.598 17.7274C103.659 17.5502 103.665 17.3584 103.614 17.178L101.936 11.3077L106.097 7.56351C106.23 7.44353 106.325 7.28712 106.37 7.11362C106.416 6.94012 106.409 6.75715 106.351 6.58734C106.294 6.41752 106.188 6.26831 106.046 6.15815C105.905 6.04799 105.734 5.98172 105.555 5.96752L100.326 5.5511L98.0634 0.542085C97.9912 0.380794 97.8739 0.243833 97.7257 0.147729C97.5774 0.0516259 97.4045 0.000488281 97.2278 0.000488281C97.0511 0.000488281 96.8782 0.0516259 96.7299 0.147729C96.5816 0.243833 96.4643 0.380794 96.3922 0.542085L94.1294 5.5511L88.9002 5.96661C88.7245 5.98053 88.5566 6.04477 88.4164 6.15164C88.2763 6.25852 88.1699 6.40351 88.11 6.56926C88.0501 6.73501 88.0392 6.91451 88.0787 7.08628C88.1181 7.25805 88.2062 7.41482 88.3324 7.53783L92.1977 11.3049ZM94.8145 7.33696C94.9783 7.32406 95.1355 7.26735 95.2698 7.17278C95.404 7.07821 95.5104 6.94927 95.5777 6.79946L97.2278 3.14795L98.8779 6.79946C98.9452 6.94927 99.0515 7.07821 99.1858 7.17278C99.3201 7.26735 99.4773 7.32406 99.641 7.33696L103.284 7.62588L100.284 10.3262C100.024 10.561 99.9199 10.9224 100.015 11.26L101.165 15.282L97.7378 12.9972C97.5874 12.8963 97.4103 12.8423 97.2292 12.8423C97.048 12.8423 96.871 12.8963 96.7206 12.9972L93.1397 15.3848L94.1028 11.215C94.1381 11.0617 94.1333 10.9018 94.089 10.7508C94.0447 10.5998 93.9622 10.4627 93.8496 10.3528L91.0631 7.63597L94.8145 7.33696Z"
+                                fill="currentColor" />
+                        </svg>
+                        <p
+                            class="pp font-normal text-[16px] text-[#737373] leauding-[28px] w-[275px] mt-[16px] ml-[26px]">
+                            Product helps you see how many more days you need to work to reach your financial goal.</p>
+                        <div class="flex gap-[14px] mt-[16px] ml-[26px] mb-[23px] items-center">
+                            <img src="./images/wohid2.svg" alt="wohid-ari" width="50" height="50">
+                            <div>
+                                <strong class="font-semibold text-[16px] text-[#02897A] leauding-[24px]">Wahid
+                                    Ari</strong>
+                                <p class="pp font-medium text-[14px] text-[#252B42] leauding-[24px]">Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="div-bg w-[327px] mt-[32px] md:mt-0 border-[1px] border-[#00000040] rounded-[5px] mx-auto md:mx-0">
+                        <svg class="text-[#F3CD03] w-[106px] mt-[28px] ml-[28px]" width="107" height="19"
+                            viewBox="0 0 107 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.2961 6.58663C18.2384 6.41682 18.1323 6.26761 17.9908 6.15742C17.8493 6.04723 17.6787 5.98089 17.4999 5.96658L12.2708 5.55107L10.008 0.542056C9.9359 0.380725 9.81869 0.243699 9.67047 0.147514C9.52225 0.0513295 9.34936 9.71158e-05 9.17266 1.37932e-07C8.99597 -9.684e-05 8.82302 0.0509458 8.6747 0.146968C8.52637 0.24299 8.40901 0.379887 8.33677 0.541138L6.07395 5.55107L0.844797 5.96658C0.669105 5.9805 0.501144 6.04474 0.361006 6.15161C0.220868 6.25849 0.114488 6.40348 0.0545932 6.56923C-0.00530196 6.73498 -0.0161763 6.91448 0.0232713 7.08625C0.062719 7.25802 0.150818 7.41479 0.277029 7.5378L4.14134 11.3049L2.77466 17.2229C2.73316 17.402 2.74646 17.5895 2.81283 17.761C2.8792 17.9324 2.99559 18.08 3.14687 18.1845C3.29816 18.2891 3.47737 18.3457 3.66124 18.3471C3.84511 18.3485 4.02516 18.2946 4.17803 18.1924L9.17237 14.8628L14.1667 18.1924C14.3229 18.2961 14.5072 18.3495 14.6947 18.3454C14.8822 18.3413 15.0639 18.2799 15.2155 18.1694C15.367 18.0589 15.4811 17.9047 15.5423 17.7274C15.6036 17.5502 15.6091 17.3584 15.5581 17.1779L13.8805 11.3076L18.0411 7.56348C18.3135 7.31766 18.4135 6.93426 18.2961 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M40.3103 6.58663C40.2526 6.41682 40.1465 6.26761 40.005 6.15742C39.8635 6.04723 39.6929 5.98089 39.5141 5.96658L34.2849 5.55107L32.0221 0.542056C31.9501 0.380725 31.8328 0.243699 31.6846 0.147514C31.5364 0.0513295 31.3635 9.71158e-05 31.1868 1.37932e-07C31.0101 -9.684e-05 30.8372 0.0509458 30.6889 0.146968C30.5405 0.24299 30.4232 0.379887 30.3509 0.541138L28.0881 5.55107L22.859 5.96658C22.6833 5.9805 22.5153 6.04474 22.3752 6.15161C22.235 6.25849 22.1286 6.40348 22.0688 6.56923C22.0089 6.73498 21.998 6.91448 22.0374 7.08625C22.0769 7.25802 22.165 7.41479 22.2912 7.5378L26.1555 11.3049L24.7888 17.2229C24.7473 17.402 24.7606 17.5895 24.827 17.761C24.8934 17.9324 25.0097 18.08 25.161 18.1845C25.3123 18.2891 25.4915 18.3457 25.6754 18.3471C25.8593 18.3485 26.0393 18.2946 26.1922 18.1924L31.1865 14.8628L36.1809 18.1924C36.3371 18.2961 36.5214 18.3495 36.7089 18.3454C36.8963 18.3413 37.0781 18.2799 37.2296 18.1694C37.3812 18.0589 37.4952 17.9047 37.5565 17.7274C37.6178 17.5502 37.6233 17.3584 37.5723 17.1779L35.8947 11.3076L40.0553 7.56348C40.3277 7.31766 40.4277 6.93426 40.3103 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M62.321 6.58663C62.2633 6.41682 62.1572 6.26761 62.0157 6.15742C61.8743 6.04723 61.7036 5.98089 61.5248 5.96658L56.2957 5.55107L54.0329 0.542056C53.9608 0.380725 53.8436 0.243699 53.6954 0.147514C53.5471 0.0513295 53.3743 9.71158e-05 53.1976 1.37932e-07C53.0209 -9.684e-05 52.8479 0.0509458 52.6996 0.146968C52.5513 0.24299 52.4339 0.379887 52.3617 0.541138L50.0989 5.55107L44.8697 5.96658C44.694 5.9805 44.526 6.04474 44.3859 6.15161C44.2458 6.25849 44.1394 6.40348 44.0795 6.56923C44.0196 6.73498 44.0087 6.91448 44.0482 7.08625C44.0876 7.25802 44.1757 7.41479 44.3019 7.5378L48.1662 11.3049L46.7996 17.2229C46.7581 17.402 46.7714 17.5895 46.8377 17.761C46.9041 17.9324 47.0205 18.08 47.1718 18.1845C47.3231 18.2891 47.5023 18.3457 47.6861 18.3471C47.87 18.3485 48.0501 18.2946 48.2029 18.1924L53.1973 14.8628L58.1916 18.1924C58.3478 18.2961 58.5321 18.3495 58.7196 18.3454C58.9071 18.3413 59.0888 18.2799 59.2404 18.1694C59.3919 18.0589 59.506 17.9047 59.5672 17.7274C59.6285 17.5502 59.634 17.3584 59.5831 17.1779L57.9054 11.3076L62.066 7.56348C62.3384 7.31766 62.4384 6.93426 62.321 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M84.3371 6.58663C84.2795 6.41682 84.1733 6.26761 84.0319 6.15742C83.8904 6.04723 83.7197 5.98089 83.541 5.96658L78.3118 5.55107L76.049 0.542056C75.9769 0.380725 75.8597 0.243699 75.7115 0.147514C75.5633 0.0513295 75.3904 9.71158e-05 75.2137 1.37932e-07C75.037 -9.684e-05 74.864 0.0509458 74.7157 0.146968C74.5674 0.24299 74.45 0.379887 74.3778 0.541138L72.115 5.55107L66.8858 5.96658C66.7101 5.9805 66.5422 6.04474 66.402 6.15161C66.2619 6.25849 66.1555 6.40348 66.0956 6.56923C66.0357 6.73498 66.0248 6.91448 66.0643 7.08625C66.1037 7.25802 66.1918 7.41479 66.318 7.5378L70.1824 11.3049L68.8157 17.2229C68.7742 17.402 68.7875 17.5895 68.8538 17.761C68.9202 17.9324 69.0366 18.08 69.1879 18.1845C69.3392 18.2891 69.5184 18.3457 69.7023 18.3471C69.8861 18.3485 70.0662 18.2946 70.219 18.1924L75.2134 14.8628L80.2077 18.1924C80.364 18.2961 80.5482 18.3495 80.7357 18.3454C80.9232 18.3413 81.1049 18.2799 81.2565 18.1694C81.408 18.0589 81.5221 17.9047 81.5834 17.7274C81.6446 17.5502 81.6501 17.3584 81.5992 17.1779L79.9215 11.3076L84.0821 7.56348C84.3545 7.31766 84.4545 6.93426 84.3371 6.58663Z"
+                                fill="#F3CD03" />
+                            <path
+                                d="M92.1977 11.3049L90.831 17.2229C90.7887 17.4021 90.8014 17.5899 90.8674 17.7618C90.9335 17.9336 91.0499 18.0816 91.2013 18.1863C91.3528 18.291 91.5323 18.3476 91.7164 18.3487C91.9006 18.3498 92.0808 18.2953 92.2334 18.1924L97.2278 14.8629L102.222 18.1924C102.378 18.2962 102.563 18.3496 102.75 18.3454C102.938 18.3413 103.119 18.2799 103.271 18.1694C103.422 18.0589 103.536 17.9047 103.598 17.7274C103.659 17.5502 103.665 17.3584 103.614 17.178L101.936 11.3077L106.097 7.56351C106.23 7.44353 106.325 7.28712 106.37 7.11362C106.416 6.94012 106.409 6.75715 106.351 6.58734C106.294 6.41752 106.188 6.26831 106.046 6.15815C105.905 6.04799 105.734 5.98172 105.555 5.96752L100.326 5.5511L98.0634 0.542085C97.9912 0.380794 97.8739 0.243833 97.7257 0.147729C97.5774 0.0516259 97.4045 0.000488281 97.2278 0.000488281C97.0511 0.000488281 96.8782 0.0516259 96.7299 0.147729C96.5816 0.243833 96.4643 0.380794 96.3922 0.542085L94.1294 5.5511L88.9002 5.96661C88.7245 5.98053 88.5566 6.04477 88.4164 6.15164C88.2763 6.25852 88.1699 6.40351 88.11 6.56926C88.0501 6.73501 88.0392 6.91451 88.0787 7.08628C88.1181 7.25805 88.2062 7.41482 88.3324 7.53783L92.1977 11.3049ZM94.8145 7.33696C94.9783 7.32406 95.1355 7.26735 95.2698 7.17278C95.404 7.07821 95.5104 6.94927 95.5777 6.79946L97.2278 3.14795L98.8779 6.79946C98.9452 6.94927 99.0515 7.07821 99.1858 7.17278C99.3201 7.26735 99.4773 7.32406 99.641 7.33696L103.284 7.62588L100.284 10.3262C100.024 10.561 99.9199 10.9224 100.015 11.26L101.165 15.282L97.7378 12.9972C97.5874 12.8963 97.4103 12.8423 97.2292 12.8423C97.048 12.8423 96.871 12.8963 96.7206 12.9972L93.1397 15.3848L94.1028 11.215C94.1381 11.0617 94.1333 10.9018 94.089 10.7508C94.0447 10.5998 93.9622 10.4627 93.8496 10.3528L91.0631 7.63597L94.8145 7.33696Z"
+                                fill="currentColor" />
+                        </svg>
+                        <p
+                            class="pp font-normal text-[16px] text-[#737373] leauding-[28px] w-[275px] mt-[16px] ml-[26px]">
+                            Product helps you see how many more days you need to work to reach your financial goal.</p>
+                        <div class="flex gap-[14px] mt-[16px] ml-[26px] mb-[23px] items-center">
+                            <img src="./images/wohid3.svg" alt="wohid-ari" width="50" height="50">
+                            <div>
+                                <strong class="font-semibold text-[16px] text-[#02897A] leauding-[24px]">Wahid
+                                    Ari</strong>
+                                <p class="pp font-medium text-[14px] text-[#252B42] leauding-[24px]">Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="containers pb-[90px] md:pb-[150px]">
+                <div
+                    class="cm:w-[371px]  mx-auto md:mx-0 md:flex bg-[#02897A] rounded-[32px] items-center md:mx-[71px]">
+                    <div class="pt-[17px] md:pt-[49px] md:pl-[51px] md:pb-[56px]">
+                        <h2
+                            class="w-[328px] mx-auto md:mx-0 text-center md:text-start md:w-[500px] font-semibold text-[32px] text-[#FFFFFF] pb-[40px]">
+                            Join 100 Compannies who boost their business with Product</h2>
+                        <div class="w-[160px] mx-auto md:mx-0">
+                            <button
+                                class="button-t font-semibold text-[20px] text-[#02897A] pt-[13px] pb-[7px] px-[33px] bg-[#FFFFFF] rounded-[8px] hover:text-[#FFFFFF] hover:bg-[#02897A] border border-trancparent hover:border-[1px] hover:border-[#FFFFFF] duration-300 transform active:scale-90">Get
+                                This
+                            </button>
+                        </div>
+                    </div>
+                    <div class="md:pr-[36px]">
+                        <img src="./images/join-img.png" alt="join-img" width="371" height="351">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="pb-[46px]">
+        <div class="containers">
+            <div class="md:flex justify-between pb-[44px] md:pb-[10px]">
+                <div class="w-[162px] mx-auto md:mx-0">
+                    <div class="flex gap-[16px] items-center pb-[24px]">
+                        <a href="/">
+                            <img src="./images/logo.svg" alt="logo" width="32" height="29">
+                        </a>
+                        <p class="font-bold text-[22px] text-[#173A56] hover:text-[#02897A] duration-200">Product</p>
+                    </div>
+                    <div class="flex gap-[16px]">
+                        <a href="https://www.instagram.com" target="_blank">
+                            <svg class="text-[#02897A]" width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20.0161" r="20" fill="#EDFFFC" />
+                                <path
+                                    d="M25 10.0161H15C12.2386 10.0161 10 12.2547 10 15.0161V25.0161C10 27.7775 12.2386 30.0161 15 30.0161H25C27.7614 30.0161 30 27.7775 30 25.0161V15.0161C30 12.2547 27.7614 10.0161 25 10.0161Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M24 19.3859C24.1234 20.2182 23.9812 21.0681 23.5937 21.8149C23.2062 22.5617 22.5931 23.1673 21.8416 23.5456C21.0901 23.9239 20.2384 24.0555 19.4077 23.9219C18.5771 23.7882 17.8097 23.396 17.2148 22.8011C16.6199 22.2062 16.2277 21.4388 16.094 20.6081C15.9604 19.7775 16.092 18.9258 16.4703 18.1743C16.8485 17.4228 17.4541 16.8097 18.2009 16.4222C18.9477 16.0347 19.7977 15.8925 20.63 16.0159C21.4789 16.1418 22.2648 16.5374 22.8716 17.1442C23.4785 17.7511 23.8741 18.537 24 19.3859Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M25.5 14.5161H25.51" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <svg class="text-[#02897A]" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="20" fill="#EDFFFC" />
+                                <path
+                                    d="M26 10H23C21.6739 10 20.4021 10.5268 19.4645 11.4645C18.5268 12.4021 18 13.6739 18 15V18H15V22H18V30H22V22H25L26 18H22V15C22 14.7348 22.1054 14.4804 22.2929 14.2929C22.4804 14.1054 22.7348 14 23 14H26V10Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank">
+                            <svg class="text-[#02897A]" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="20" fill="#EDFFFC" />
+                                <path
+                                    d="M31 11.0101C30.0424 11.6855 28.9821 12.2022 27.86 12.5401C27.2577 11.8476 26.4573 11.3567 25.567 11.134C24.6767 10.9112 23.7395 10.9673 22.8821 11.2945C22.0247 11.6218 21.2884 12.2045 20.773 12.9638C20.2575 13.7231 19.9877 14.6224 20 15.5401V16.5401C18.2426 16.5856 16.5013 16.1959 14.931 15.4055C13.3607 14.6151 12.0103 13.4487 11 12.0101C11 12.0101 7 21.0101 16 25.0101C13.9405 26.408 11.4872 27.109 9 27.0101C18 32.0101 29 27.0101 29 15.5101C28.9991 15.2315 28.9723 14.9537 28.92 14.6801C29.9406 13.6735 30.6608 12.4028 31 11.0101V11.0101Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-[118px] mx-auto md:mx-0 pt-[31px] md:pt-0 text-center md:text-start">
+                    <a href="#">
+                        <strong
+                            class="font-medium text-[20px] leauding-[30px] text-[#22343D] hover:font-bold duration-200">Resource</strong>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-normal text-[16px] text-[#22343D] leauding-[35px] pt-[8px] hover:font-semibold duration-200">
+                            About Us</p>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-normal text-[16px] text-[#22343D] leauding-[35px] pt-[8px] hover:font-semibold duration-200">
+                            Blog</p>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-normal text-[16px] text-[#22343D] leauding-[35px] pt-[8px] hover:font-semibold duration-200">
+                            Contact</p>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-normal text-[16px] text-[#22343D] leauding-[35px] pt-[8px] hover:font-semibold duration-200">
+                            FAQ</p>
+                    </a>
+                </div>
+                <div class="w-[135px] mx-auto md:mx-0 pt-[31px] md:pt-0 text-center md:text-start">
+                    <a href="#">
+                        <strong
+                            class="font-medium text-[20px] leauding-[30px] text-[#22343D] hover:font-bold duration-200">Legal
+                            Stuff</strong>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-normal text-[16px] text-[#22343D] leauding-[35px] pt-[8px] hover:font-semibold duration-200">
+                            Disclaimer</p>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-normal text-[16px] text-[#22343D] leauding-[35px] pt-[8px] hover:font-semibold duration-200">
+                            Financing</p>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-normal text-[16px] text-[#22343D] leauding-[35px] pt-[8px] hover:font-semibold duration-200">
+                            Privacy Policy</p>
+                    </a>
+                    <a href="#">
+                        <p
+                            class="font-normal text-[16px] text-[#22343D] leauding-[35px] pt-[8px] hover:font-semibold duration-200">
+                            Terms of Service</p>
+                    </a>
+                </div>
+                <div class="w-[325px] mx-auto md:mx-0 pt-[31px] md:pt-0 text-center md:text-start">
+                    <p
+                        class="w-[325px] mx-auto md:mx-0 font-medium text-[20px] text-[#22343D] leauding-[30px] w-[280px] pb-[34px]">
+                        knowing you're
+                        always on the best energy deal. </p>
+                    <form>
+                        <input
+                            class="text w-[325px] outline-none border-[1px] border-[#00000040] rounded-[4px] py-[10px] pl-[15px] mb-[21px]"
+                            type="text" required>
+                        <button type="submit"
+                            class="font-bold text-[16px] text-[#FFFFFF] py-[8px] px-[15px] bg-[#02897A] rounded-[4px] border border-trancparent hover:text-[#02897A] hover:bg-[#FFFFFF] hover:border-[1px] hover:border-[#02897A] duration-300 transform active:scale-90">Sign
+                            up Now</button>
+                    </form>
+                </div>
+            </div>
+            <p class="font-normal text-[16px] leauding-[30px] text-[#22343D] text-center">Made With Love By Figmaland
+                All Right Reserved </p>
+        </div>
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+    <script>
+        const toggleBtn = document.getElementById("darkToggleBtn");
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,212 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/poppins-v22-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v22-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/poppins-v22-latin-700.woff2') format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.containers {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.about {
+    background-image: url(../images/about-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.quick {
+    background-image: url(../images/quick-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shadow {
+    box-shadow: 0px 2px 8px 0px #00000040;
+}
+
+@media (max-width:768px) {
+    .about {
+        background-image: url(../images/Bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media (max-width:768px) {
+    .quick {
+        background-image: url(../images/quick-bgg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+/* styles.css yoki <style> ichida */
+body {
+    background-color: white;
+    color: black;
+    transition: background 0.3s ease;
+}
+
+.dark-mode {
+    background-color: #22343D;
+    color: white;
+}
+
+/* Headerdagi elementlar */
+.dark-mode header p,
+.dark-mode header a,
+.dark-mode header button,
+.dark-mode header svg {
+    color: white !important;
+    fill: white !important;
+}
+
+.dark-mode header button {
+    background-color: #22343D;
+    border-color: #444;
+}
+
+.dark-mode header button:hover {
+    background-color: #02897A;
+    color: white;
+}
+
+/* section */
+
+.dark-mode {
+    background-color: #22343D;
+    color: #ffffff;
+}
+
+.dark-mode section h2 {
+    color: #ffffff !important;
+}
+
+.dark-mode section h3 {
+    color: #ffffff !important;
+}
+
+.dark-mode section span {
+    color: #ffffff !important;
+}
+
+.dark-mode section p {
+    color: #FFFFFF !important;
+}
+
+.dark-mode section button {
+    background-color: #ffffff !important;
+    color: #02897A !important;
+    border: 1px solid #02897A !important;
+}
+
+.dark-mode section button:hover {
+    background-color: #02897A !important;
+    color: #ffffff !important;
+}
+
+.dark-mode section a {
+    color: #FFFFFF !important;
+}
+
+.dark-mode section a p {
+    border-color: #FFFFFF !important;
+}
+
+.dark-mode footer p {
+    color: #ffffff !important;
+}
+
+.dark-mode footer strong {
+    color: #ffffff !important;
+}
+
+.dark-mode .text {
+    color: #22343D;
+}
+
+.dark-mode .darc-mod {
+    background-color: #ffffff !important;
+}
+
+.dark-mode .darc-p {
+    color: #22343D !important;
+}
+
+.dark-mode .shadow-p {
+    background-color: #ffffff !important;
+}
+
+.dark-mode .darc-span {
+    color: #02897A !important;
+}
+
+.dark-mode .button-pp {
+    background-color: #02897A !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .quic-p {
+    color: #22343D !important;
+}
+
+.dark-mode .button-pp:hover {
+    background-color: #ffffff !important;
+    color: #02897A !important;
+    border: 1px solid #02897A !important;
+}
+
+.dark-mode .button-t:hover {
+    border: 1px solid #ffffff !important;
+}
+
+.dark-mode .div-bg {
+    background-color: #ffffff !important;
+}
+
+.dark-mode .pp {
+    color: #22343D !important;
+}
